@@ -124,10 +124,10 @@ directories_sm = {
     '0' : ['vhtt_wh', 'vhtt', 'cmb'],
     '1' : ['vhtt_wh', 'vhtt', 'cmb'],
     '2' : ['vhtt_wh', 'vhtt', 'cmb'],
-    '3' : ['vhtt_zh', 'vhtt', 'cmb'],
-    '4' : ['vhtt_zh', 'vhtt', 'cmb'],
-    '5' : ['vhtt_zh', 'vhtt', 'cmb'],
-    '6' : ['vhtt_zh', 'vhtt', 'cmb'],
+    '3' : ['vhtt_zh_llll', 'vhtt', 'cmb'],
+    '4' : ['vhtt_zh_lllt', 'vhtt', 'cmb'],
+    '5' : ['vhtt_zh_lllt', 'vhtt', 'cmb'],
+    '6' : ['vhtt_zh_lltt', 'vhtt', 'cmb'],
     '7' : ['vhtt_wh_had', 'vhtt', 'cmb'],
     '8' : ['vhtt_wh_had', 'vhtt', 'cmb'],
     },
@@ -187,7 +187,7 @@ verb = "-v" if options.verbose else ""
 
 for channel in channels :
     category_names = directories(channel)
-    for period in periods :
+    for period in ['8TeV'] :
         for cat in categories[channel] :
             for mass in parseArgs(args) :
                 print "setup directory structure for", options.analysis, period, channel, cat, mass
