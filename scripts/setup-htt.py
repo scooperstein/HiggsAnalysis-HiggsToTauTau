@@ -187,7 +187,7 @@ verb = "-v" if options.verbose else ""
 
 for channel in channels :
     category_names = directories(channel)
-    for period in ['8TeV'] :
+    for period in periods :
         for cat in categories[channel] :
             for mass in parseArgs(args) :
                 print "setup directory structure for", options.analysis, period, channel, cat, mass
